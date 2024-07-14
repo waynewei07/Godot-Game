@@ -1,0 +1,48 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://開幕動畫1.webm" type="VideoStream" id=1]
+[ext_resource path="res://開幕動畫2.webm" type="VideoStream" id=2]
+[ext_resource path="res://VideoPlayer.gd" type="Script" id=3]
+[ext_resource path="res://VideoPlayer2.gd" type="Script" id=4]
+[ext_resource path="res://Button.gd" type="Script" id=5]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 165.478, 60.0822 )
+
+[node name="Introducing Video" type="Node2D"]
+
+[node name="VideoPlayer2" type="VideoPlayer" parent="."]
+visible = false
+margin_right = 40.0
+margin_bottom = 40.0
+rect_scale = Vector2( 25.6696, 15.0496 )
+stream = ExtResource( 2 )
+script = ExtResource( 4 )
+
+[node name="VideoPlayer" type="VideoPlayer" parent="."]
+margin_top = -2.0
+margin_right = 40.0
+margin_bottom = 38.0
+rect_scale = Vector2( 25.7007, 15.0241 )
+mouse_filter = 2
+stream = ExtResource( 1 )
+autoplay = true
+script = ExtResource( 3 )
+
+[node name="Button" type="Area2D" parent="."]
+visible = false
+position = Vector2( -238, -194 )
+scale = Vector2( 0.521217, 0.56173 )
+z_index = 1
+script = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Button"]
+position = Vector2( 1417.84, 1194.52 )
+scale = Vector2( 1, 0.999999 )
+shape = SubResource( 1 )
+
+[connection signal="finished" from="VideoPlayer2" to="VideoPlayer2" method="_on_VideoPlayer2_finished"]
+[connection signal="finished" from="VideoPlayer" to="Button" method="_on_VideoPlayer_finished"]
+[connection signal="input_event" from="Button" to="VideoPlayer2" method="_on_Button_input_event"]
+[connection signal="input_event" from="Button" to="VideoPlayer" method="_on_Button_input_event"]
+[connection signal="input_event" from="Button" to="Button" method="_on_Button_input_event"]

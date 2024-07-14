@@ -1,0 +1,55 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://完整圖.png" type="Texture" id=1]
+
+[node name="WallContainer" type="Node"]
+
+[node name="Wall1" type="KinematicBody2D" parent="."]
+position = Vector2( 464, -207 )
+scale = Vector2( 0.888758, 0.891539 )
+collision_layer = 8
+collision_mask = 7
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Wall1"]
+position = Vector2( 56.275, 571.679 )
+scale = Vector2( 0.720106, 0.747771 )
+texture = ExtResource( 1 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Wall1"]
+position = Vector2( -365.662, 116.287 )
+scale = Vector2( 0.718569, 0.741889 )
+polygon = PoolVector2Array( 56.2583, 391.458, 74.261, 417.256, 50.6325, 471.096, 61.8842, 511.475, 92.2636, 520.448, 156.398, 489.042, 204.78, 529.422, 241.911, 523.813, 263.289, 483.434, 270.04, 435.203, 243.036, 393.701, 204.78, 379.12, 156.398, 385.85, 128.269, 367.903, 110.266, 389.215, 77.6365, 392.58 )
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="Wall1"]
+position = Vector2( -365.662, 73.6641 )
+scale = Vector2( 0.715499, 0.801237 )
+polygon = PoolVector2Array( 336.425, 621.397, 325.173, 640.466, 333.049, 656.169, 310.546, 677.48, 294.793, 686.453, 273.415, 699.913, 239.66, 696.548, 234.034, 715.617, 239.66, 777.308, 257.663, 822.174, 322.923, 876.013, 378.056, 907.42, 429.813, 914.15, 495.073, 891.717, 546.831, 853.58, 579.46, 794.133, 537.829, 772.821, 527.703, 739.171, 506.325, 710.008, 490.572, 669.629, 415.186, 637.101 )
+
+[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="Wall1"]
+position = Vector2( -361.162, 94.9713 )
+rotation = 0.0272652
+scale = Vector2( 0.727528, 0.741527 )
+polygon = PoolVector2Array( 652.596, 434.081, 722.356, 370.146, 801.118, 328.645, 848.375, 336.497, 940.639, 381.363, 963.142, 392.58, 1030.65, 388.093, 1050.9, 418.378, 1062.16, 439.689, 1104.91, 456.514, 1154.42, 459.879, 1175.8, 445.297, 1224.18, 444.176, 1251.18, 502.502, 1253.43, 561.95, 1244.43, 639.344, 1226.43, 669.629, 1171.3, 639.344, 1172.42, 620.276, 1154.42, 620.276, 1152.17, 637.101, 1092.54, 676.359, 848.375, 541.76, 829.247, 514.84, 806.744, 501.38, 774.114, 475.582, 731.358, 476.704 )
+
+[node name="CollisionPolygon2D4" type="CollisionPolygon2D" parent="Wall1"]
+position = Vector2( -382.54, 126.382 )
+scale = Vector2( 0.73607, 0.731479 )
+polygon = PoolVector2Array( 790.991, 795.254, 785.366, 851.337, 798.868, 896.203, 849.5, 926.488, 918.135, 914.15, 1044.15, 819.931, 1098.16, 785.159, 1098.16, 761.604, 928.262, 667.385, 917.01, 683.089, 912.509, 727.955, 896.757, 757.118, 861.877, 775.064, 830.372, 794.133 )
+
+[node name="CollisionPolygon2D5" type="CollisionPolygon2D" parent="Wall1"]
+position = Vector2( -537.813, -19.4334 )
+scale = Vector2( 0.978568, 1.0036 )
+polygon = PoolVector2Array( 623.342, 505.867, 622.217, 533.908, 667.223, 527.178 )
+
+[node name="CollisionPolygon2D6" type="CollisionPolygon2D" parent="Wall1"]
+position = Vector2( -374.663, 73.6641 )
+scale = Vector2( 0.663448, 0.785152 )
+polygon = PoolVector2Array( -165.399, 887.23, -139.521, 877.135, -109.141, 902.933, -99.0146, 928.731, -111.391, 954.529, -100.14, 989.301, -79.8867, 1013.98, -165.399, 1015.1 )
+
+[node name="CollisionPolygon2D7" type="CollisionPolygon2D" parent="Wall1"]
+position = Vector2( -107.999, 82.6373 )
+scale = Vector2( 0.720862, 0.747045 )
+polygon = PoolVector2Array( 1030.65, 206.385, 1030.65, 1108.2, -571.584, 1108.2, -569.334, 204.141, 1012.65, 206.385, 1035.15, 254.616, -520.952, 250.129, -520.952, 1054.36, 982.27, 1057.72, 984.52, 260.224, 1035.15, 254.616 )
